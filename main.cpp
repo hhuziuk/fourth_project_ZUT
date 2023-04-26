@@ -8,13 +8,15 @@ using namespace std;
 int Shape::counter = 0;
 
 int main() {
-    Tree roof(12, '*', "red");
-    Rectangle base(8, 10, '*', "green");
-    Border window(4, '#', "yellow");
+    Tree roof(22, '*', "red");
+    Rectangle base(20, 30, '*', "green");
+    Border window(12, '#', "yellow");
 
     roof.Print();
+
     int roof_center = roof.getWidth() / 2;
     int base_center = base.getWidth() / 2;
+
     int window_center = window.getWidth() / 2;
     int offset_base = roof_center - base_center;
     int offset_window = base_center - window_center;
@@ -30,7 +32,7 @@ int main() {
                 window.PrintAtPosition();
             } else {
                 base.setX(i);
-                base.setY(j - offset_base);
+                base.setY(j - 2 * offset_base);
                 base.PrintAtPosition();
             }
         }
@@ -39,7 +41,7 @@ int main() {
 
     cout << endl;
 
-    Rectangle p(5, 7, '*', "green");
+    Rectangle p(5, 7, '*', "magenta");
     Rectangle k(5, '^', "green");
     Triangle tr1(5, '%', "blue", Triangle::UPRIGHT);
     Triangle tr2(5, '$', "yellow", Triangle::UPLEFT);

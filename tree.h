@@ -1,3 +1,5 @@
+#ifndef TREE_H
+#define TREE_H
 
 #include "shape.h"
 
@@ -7,3 +9,5 @@ public:
   virtual void Fill();
   Tree(int h, char s, std::string c);
 };
+
+#endif
